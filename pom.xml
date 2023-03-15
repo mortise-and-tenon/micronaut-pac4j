@@ -10,13 +10,6 @@
 
     <packaging>${packaging}</packaging>
 
-<!--    <parent>-->
-<!--        <groupId>io.micronaut</groupId>-->
-<!--        <artifactId>micronaut-parent</artifactId>-->
-<!--        <version>3.8.6</version>-->
-<!--        <relativePath/>-->
-<!--    </parent>-->
-
     <properties>
         <packaging>jar</packaging>
         <jdk.version>11</jdk.version>
@@ -74,13 +67,11 @@
             <groupId>io.micronaut</groupId>
             <artifactId>micronaut-session</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.pac4j</groupId>
             <artifactId>pac4j-core</artifactId>
             <version>${pac4j.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-collections4</artifactId>
@@ -102,26 +93,6 @@
                 <version>3.5.2</version>
             </plugin>
 
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-shade-plugin</artifactId>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <phase>package</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>shade</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--                <configuration>-->
-<!--                    <artifactSet>-->
-<!--                        <excludes>-->
-<!--                            <exclude>io.micronaut:mirconaut-aop</exclude>-->
-<!--                        </excludes>-->
-<!--                    </artifactSet>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -131,7 +102,7 @@
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
-                            <version>1.18.26</version>
+                            <version>${lombok.version}</version>
                         </path>
                         <path>
                             <groupId>io.micronaut</groupId>
