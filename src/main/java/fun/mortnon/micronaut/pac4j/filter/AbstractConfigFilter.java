@@ -53,14 +53,16 @@ public abstract class AbstractConfigFilter implements HttpServerFilter {
     private void initSession(HttpRequest<?> request) {
         Session session = null;
 
-        for (HttpSessionIdResolver resolver : resolvers) {
-            List<String> ids = resolver.resolveIds(request);
-            if (CollectionUtils.isNotEmpty(ids)) {
-                String id = ids.get(0);
-                Mono<Optional<Session>> sessionLookup = Mono.fromCompletionStage(sessionStore.findSession(id));
-                session = sessionLookup.block().orElse(null);
-                if (null != session) {
-                    break;
+        if(null != resolvers) {
+            for (HttpSessionIdResolver resolver : resolvers) {
+                List<String> ids = resolver.resolveIds(request);
+                if (CollectionUtils.isNotEmpty(ids)) {
+                    String id = ids.get(0);
+                    Mono<Optional<Session>> sessionLookup = Mono.fromCompletionStage(sessionStore.findSession(id));
+                    session = sessionLookup.block().orElse(null);
+                    if (null != session) {
+                        break;
+                    }
                 }
             }
         }
