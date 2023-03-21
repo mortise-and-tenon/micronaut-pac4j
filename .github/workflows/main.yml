@@ -22,4 +22,4 @@ jobs:
           gpg_private_key: ${{ secrets.GPG_SECRET}}
           gpg_passphrase: ${{ secrets.GPG_PASSWORD}}
           nexus_username: ${{ secrets.OSSRH_USER}}
-          nexus_password: ${{ secrest.OSSRH_PASSWORD}}
+          nexus_password: ${{ secrets.OSSRH_PASSWORD}}
