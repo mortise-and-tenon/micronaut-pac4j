@@ -1,0 +1,25 @@
+name: publish jar to maven repository
+on:
+  release:
+    types[released]
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup
+        uses: actions/setup-java@1
+        with:
+          java-version: 11
+          server-id: sonatype-nexus-staging
+          server-username: ${{ secrets.OSSRH_USER }}
+          server-password: ${{ secrets.OSSRH_PASSWORD}}
+          gpg-passphrase: ${{ secrets.GPG_PASSWORD}}
+      - name: publish
+        uses: samuelmeuli/action-maven-publish@v1
+        with:
+          gpg_private_key: ${{ secrets.GPG_SECRET}}
+          gpg_passphrase: ${{ secrets.GPG_PASSWORD}}
+          nexus_username: ${{ secrets.OSSRH_USER}}
+          nexus_password: ${{ secrest.OSSRH_PASSWORD}}
