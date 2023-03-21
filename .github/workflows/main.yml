@@ -1,7 +1,7 @@
 name: publish jar to maven repository
 on:
   release:
-    types[released]
+    types: [released]
 jobs:
   publish:
     runs-on: ubuntu-latest
