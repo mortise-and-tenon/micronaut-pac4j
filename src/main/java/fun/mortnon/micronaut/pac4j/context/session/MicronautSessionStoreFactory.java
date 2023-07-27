@@ -1,9 +1,6 @@
 package fun.mortnon.micronaut.pac4j.context.session;
 
-import io.micronaut.context.annotation.Prototype;
 import io.micronaut.session.Session;
-import jakarta.inject.Inject;
-import jakarta.inject.Singleton;
 import org.pac4j.core.context.session.SessionStore;
 import org.pac4j.core.context.session.SessionStoreFactory;
 

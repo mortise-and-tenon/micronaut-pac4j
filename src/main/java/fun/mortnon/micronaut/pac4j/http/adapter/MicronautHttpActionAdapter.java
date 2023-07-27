@@ -9,10 +9,6 @@ import org.pac4j.core.exception.http.HttpAction;
 import org.pac4j.core.exception.http.WithContentAction;
 import org.pac4j.core.exception.http.WithLocationAction;
 import org.pac4j.core.http.adapter.HttpActionAdapter;
-import org.pac4j.core.profile.factory.ProfileManagerFactoryAware;
-import reactor.core.publisher.Mono;
-
-import java.io.IOException;
 
 /**
  * @author dev2007

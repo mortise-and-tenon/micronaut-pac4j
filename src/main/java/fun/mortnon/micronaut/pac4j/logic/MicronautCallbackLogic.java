@@ -6,7 +6,6 @@ import io.micronaut.context.event.ApplicationEventPublisher;
 import io.micronaut.security.authentication.Authentication;
 import io.micronaut.security.event.LoginSuccessfulEvent;
 import io.micronaut.security.handlers.LoginHandler;
-import io.micronaut.security.handlers.RedirectingLoginHandler;
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
 import lombok.extern.slf4j.Slf4j;

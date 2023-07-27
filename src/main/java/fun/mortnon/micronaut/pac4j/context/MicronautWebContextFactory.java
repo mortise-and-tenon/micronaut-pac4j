@@ -2,7 +2,6 @@ package fun.mortnon.micronaut.pac4j.context;
 
 import io.micronaut.http.HttpRequest;
 import io.micronaut.http.MutableHttpResponse;
-import org.pac4j.core.context.WebContext;
 import org.pac4j.core.context.WebContextFactory;
 
 /**

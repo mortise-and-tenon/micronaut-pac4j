@@ -1,20 +1,13 @@
 package fun.mortnon.micronaut.pac4j.context.session;
 
-import fun.mortnon.micronaut.pac4j.context.MicronautWebContext;
-import io.micronaut.context.annotation.Prototype;
-import io.micronaut.http.HttpRequest;
 import io.micronaut.session.Session;
-import io.micronaut.session.http.HttpSessionFilter;
-import jakarta.inject.Inject;
 import lombok.extern.slf4j.Slf4j;
 import org.pac4j.core.context.WebContext;
 import org.pac4j.core.context.session.SessionStore;
 
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 /**
  * @author dev2007
